@@ -34,9 +34,9 @@ def cache_result(clear=False,checkfunc=None,maxsize=10):
                 try:
                     result=load_cache(cachename)
                 except:
-                    print 'Error loading result from function '+func.__name__+' with args: '+str(args)
-                    print 'and kwargs: '+str(kwargs)
-                    print 'from file '+cachename
+                    print('Error loading result from function '+func.__name__+' with args: '+str(args))
+                    print('and kwargs: '+str(kwargs))
+                    print('from file '+cachename)
                     raise
             else:
                 result=func(*args,**kwargs)
