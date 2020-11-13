@@ -1,6 +1,10 @@
 from functools import wraps
 import os
-import cPickle as pkl
+
+try:
+    import cPickle as pkl
+except ModuleNotFoundError:
+    import pickle as pkl
 
 try:
     from functools import lru_cache
